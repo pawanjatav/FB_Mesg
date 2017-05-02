@@ -2,14 +2,28 @@
 var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
+var fs = require('fs');
+var http = require('http');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//http.createServer(function (req, res) {
+//    fs.readFile('index.html', function (err, data) {
+//        res.writeHead(200, { 'Content-Type': 'text/html', 'Content-Length': data.length });
+//        res.write(data);
+//        res.end();
+//    });
+//}).listen((process.env.PORT || 3000));
+
 app.listen((process.env.PORT || 3000));
 
 // Server frontpage
 app.get('/', function (req, res) {
     res.send('This is TestBot Server');
+   
+
+    sendMessage('197185364124346', 'this is test message for bots');
     console.log("Server Created for Port 3000");
 });
 
@@ -18,7 +32,7 @@ app.get('/webhook', function (req, res) {
     //if (req.query['hub.verify_token'] === 'testbot_verify_token') {
     //    res.send(req.query['hub.challenge']);
     //} else {
-    console.log(process.env.PAGE_ACCESS_TOKEN);
+    console.log(process.env.MESSENGER_PAGE_ACCESS_TOKEN);
     //}
 
     var events = req.body.entry[0].messaging;
