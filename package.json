@@ -1,29 +1,17 @@
 {
-  "name": "messenger-get-started",
+  "name": "testbot",
   "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
-  "main": "app.js",
+  "description": "TestBot Server App",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "lint": "jshint --exclude node_modules .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
-  },
-  "author": "Facebook",
+  "author": "Pawan Jatav",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "config": "^1.20.4",
-    "crypto": "0.0.3",
-    "ejs": "^2.4.2",
-    "express": "^4.13.4",
-    "https": "^1.0.0",
-    "request": "^2.72.0"
-  },
-  "engines": {
-    "node": "~4.1.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
   }
 }
