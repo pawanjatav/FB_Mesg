@@ -1,18 +1,17 @@
 {
-  "name": "spbot",
+  "name": "testbot",
   "version": "1.0.0",
-  "description": "SPBot Server",
-  "main": "app.js",
+  "description": "TestBot Server App",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
-  "author": "Joyce Echessa",
+  "author": "Pawan Jatav",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "mongoose": "^4.6.2",
-    "request": "^2.75.0"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
   }
 }
